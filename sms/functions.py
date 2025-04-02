@@ -20,6 +20,12 @@ def send_bulk_sms(api_key, username, message, senderId, phoneNumbers, maskedNumb
         "phoneNumbers": phoneNumbers,
     }
 
+    # optional payload params
+    if maskedNumber:
+        payload["maskedNumber"] = maskedNumber
+    if telco:
+        payload["telco"] = telco
+
     # call request and return json response
     response = requests.post(url, json=payload, headers=header)
     return response.json()
