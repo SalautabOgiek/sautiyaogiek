@@ -15,3 +15,10 @@ def send_message(username, api_key, recipients, message, sender):
     except Exception as e:
         print(f'ERROR: {e}')
         return ""
+
+# flask fetch example
+# @app.route('/incoming-messages', methods=['POST'])
+# def incoming_messages():
+#    data = request.get_json(force=True)
+#    print(f'Incoming message...\n ${data}')
+#    return Response(status=200)
