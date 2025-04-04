@@ -1,6 +1,7 @@
 import africastalking
 
-def send_message(username, api_key, recipients, message, sender):
+# send messages
+def send_messages(username, api_key, recipients, message, sender):
 
     africastalking.initialize(
         username = username,
@@ -16,12 +17,7 @@ def send_message(username, api_key, recipients, message, sender):
         print(f'ERROR: {e}')
         return ""
 
-# flask fetch example
-# @app.route('/incoming-messages', methods=['POST'])
-# def incoming_messages():
-#    data = request.get_json(force=True)
-#    print(f'Incoming message...\n ${data}')
-#    return Response(status=200)
+# fetch messages
 def fetch_messages(username, api_key, last_id=0):
 
     africastalking.initialize(
