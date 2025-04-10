@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-from api_func import send_messages, fetch_messages
+from sms_api import send_messages, fetch_messages
 
 # variables
 username = "sandbox"
