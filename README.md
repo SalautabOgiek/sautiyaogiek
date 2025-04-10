@@ -9,3 +9,9 @@ Create a `.env` file
 ```text
 API_KEY=your_api_key
 ```
+
+## run test
+in terminal run: 
+
+pip install -r requirements.txt
+python ollama_test.py
