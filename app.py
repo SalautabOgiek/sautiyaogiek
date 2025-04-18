@@ -1,4 +1,4 @@
-# polling process, would be more efficient to switch to webhook system for production, but sandbox doesn't support webhooks (looking into)
+# polling process, would be more efficient to switch to webhook system for production, but sandbox doesn't support webhooks (looking into for future)
 import os
 import threading
 import time
@@ -56,7 +56,7 @@ def poll_inbound():
         for m in msgs:
             handle_inbound(m["from"], m["text"].strip())
             last_id = max(last_id, m["id"])
-        time.sleep(5)  # set to 5 seconds
+        time.sleep(5)  # set to 5 secondsß
 
 if __name__ == "__main__":
     # kick off polling process
