@@ -1,3 +1,4 @@
+# polling process, would be more efficient to switch to webhook system for production, but sandbox doesn't support webhooks (looking into)
 import os
 import threading
 import time
