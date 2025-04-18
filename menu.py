@@ -1,14 +1,14 @@
-import os
-from dotenv import load_dotenv
+# import os
+# from dotenv import load_dotenv
 
-from sms_api import send_messages, fetch_messages
+# from sms_api import send_messages, fetch_messages
 
 # sandbox connection
-username = "sandbox"
-sender = "25037"
+# username = "sandbox"
+# sender = "25037"
 
-load_dotenv()
-api_key = os.getenv('SAND_API')
+# load_dotenv()
+# api_key = os.getenv('SAND_API')
 
 # menu logic
 def get_preset(option):
@@ -19,15 +19,11 @@ def get_preset(option):
     }
     return preset.get(option, "Invalid option selected.")
 
-def get_input():
-    user_input = input("Enter your question: ")
-    return user_input
+# def get_input():
+#     user_input = input("Enter your question: ")
+#     return user_input
 
 def display_menu():
-    # print("1. Option A")
-    # print("2. Option B")
-    # print("3. Option C")
-    # print("4. User Input")
     return "SMS:\n1. Option A\n3. Option C\n4. User Input\n"
 
 # menu test
