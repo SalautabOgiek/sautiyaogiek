@@ -15,3 +15,7 @@ in terminal run:
 
 pip install -r requirements.txt
 python ollama_test.py
+
+## launch simulator
+https://developers.africastalking.com/simulator
+
