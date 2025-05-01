@@ -24,7 +24,7 @@ def get_preset(option):
 #     return user_input
 
 def display_menu():
-    return "SMS:\n\n1. Option A\n3. Option C\n4. User Input"
+    return "SMS:\n\n1. Option A\n2. Option B\n3. Option C\n4. User Input"
 
 # menu test
 # display_menu()
