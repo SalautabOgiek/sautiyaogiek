@@ -10,12 +10,17 @@
 # load_dotenv()
 # api_key = os.getenv('SAND_API')
 
-# menu logic
+# preset responses
 def get_preset(option):
     preset = {
-        '1': "You selected Option A",
-        '2': "You selected Option B",
-        '3': "You selected Option C"
+        '1': "You selected Option 1",
+        '2': "You selected Option 2",
+        '3': "You selected Option 3",
+        '4': "You selected Option 4",
+        '5': "You selected Option 5",
+        '6': "You selected Option 6",
+        '7': "You selected Option 7",
+        '8': "You selected Option 8",
     }
     return preset.get(option, "Invalid option selected.")
 
@@ -24,7 +29,7 @@ def get_preset(option):
 #     return user_input
 
 def display_menu():
-    return "SMS:\n\n1. Option A\n2. Option B\n3. Option C\n4. User Input"
+    return "Select number:\n\n1. Land Rights\n2. Cultural Preservation\n3. Environmental Conservation\n4. Legal Support\n5. Income Programs\n6. Health and Social Support\n7. Participatory Forest Management\n8. Important Contacts\n9. Custom Request"
 
 # menu test
 # display_menu()
