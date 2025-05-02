@@ -10,16 +10,8 @@ This is a project under Dr.Chad Edwards assisted by Cody George Thornell and Kha
 
 ### Test SMS
 1. Follow the steps under General
-2. TBD
-
-## run test
-in terminal run: 
-
-pip install -r requirements.txt
-python ollama_test.py
-
-## launch simulator
-https://developers.africastalking.com/simulator
+2. Launch simulator: https://developers.africastalking.com/simulator
+3. TBD
 
 ### Test RAG
 1. Follow steps under General
