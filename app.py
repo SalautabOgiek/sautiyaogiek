@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from sms_api import send_messages, fetch_messages
 from menu import get_preset, display_menu
 from configfile import load_last_id, save_last_id
+from query_data import query_rag
 
 # load presets
 load_dotenv()
@@ -39,7 +40,8 @@ def handle_inbound(from_number, text):
             reply = "Invalid option.\n" + display_menu()
 
     elif stage == "AWAITING_INPUT":
-        reply = f"You said: {text}"
+        reply = query_rag(text)
+        #reply = f"You said: {text}"
         sessions.pop(from_number, None)
 
     else:
