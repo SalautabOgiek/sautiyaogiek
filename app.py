@@ -28,11 +28,11 @@ def handle_inbound(from_number, text):
         sessions[from_number] = "AWAITING_CHOICE"
 
     elif stage == "AWAITING_CHOICE":
-        if text in ("1","2","3"):
+        if text in ("1","2","3","4","5","6","7","8"):
             reply = get_preset(text)
             sessions.pop(from_number, None)
-        elif text == "4":
-            reply = "Test input:"
+        elif text == "9":
+            reply = "Enter your custom question:"
             sessions[from_number] = "AWAITING_INPUT"
         else:
             reply = "Invalid option.\n" + display_menu()
