@@ -22,11 +22,11 @@ pip install -r requirements.txt
 ```
 ollama pull mannix/llamax3-8b-alpaca:latest
 ```
-- In terminal run:
+- In terminal run: (If you added new docx. files to "data" folder)
 ```
 python update_database.py
 ```
 - In terminal run and Insert Your Chat to the Model Here
 ```
-python query_data
+python query_data [insert_chat_here]
 ```
