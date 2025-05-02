@@ -5,10 +5,10 @@ from langchain_ollama import OllamaLLM
 from embedding_func import get_embedding_function
 
 
-# Path to the local database to fetch information populate by running update_database.py 
+# path to the local database to fetch information populate by running update_database.py 
 DB_PATH = "database"
 
-# Prompt feeding the model to get desired response, context is fetch from database, and question is user input
+# prompt feeding the model to get desired response, context is fetch from database, and question is user input
 PROMPT_TEMPLATE = """
 Answer the question in less than 190 characters based only on the following context:
 
@@ -34,16 +34,12 @@ def query_rag(query_text: str):
     # can change the model here
     model = "mannix/llamax3-8b-alpaca"
 
-    # Prepare the DB.
+    # prepare the DB.
     embedding_function = get_embedding_function(input_model= model)
     db = Chroma(persist_directory=DB_PATH, embedding_function=embedding_function)
 
-    # Search the DB.
+    # search the DB.
     results = db.similarity_search_with_score(query_text, k=5) 
-
-    # if len(results) == 0 or results[0][1] < 0.7:
-    #     print(f"I was unable to find relevant information within the documents given to me.")
-    #     return
 
     context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
