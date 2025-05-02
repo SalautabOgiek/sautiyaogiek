@@ -26,7 +26,7 @@ ollama pull mannix/llamax3-8b-alpaca:latest
 ```
 python update_database.py
 ```
-- In terminal run and Insert Your Chat to the Model Here
+- In terminal run and insert your chat to the model here
 ```
 python query_data [insert_chat_here]
 ```
