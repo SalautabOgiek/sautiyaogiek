@@ -63,8 +63,9 @@ These numbers connect you to organizations that support the Ogiek community in a
 #     user_input = input("Enter your question: ")
 #     return user_input
 
+# TODO fix newline char issue, currently talking with AT support regarding this (maybe simulator doesnt support?)
 def display_menu():
-    return "Select number: 1. Land Rights, 2. Cultural Preservation, 3. Environmental Conservation, 4. Legal Support, 5. Income Programs, 6. Health and Social Support, 7. Participatory Forest Management, 8. Important Contacts, 9. Custom Request"
+    return "Select number:\n1. Land Rights,\n2. Cultural Preservation,\n3. Environmental Conservation,\n4. Legal Support,\n5. Income Programs,\n6. Health and Social Support,\n7. Participatory Forest Management,\n8. Important Contacts,\n9. Custom Request"
 
 # menu test
 # display_menu()
