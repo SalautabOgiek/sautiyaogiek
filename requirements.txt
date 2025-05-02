@@ -6,3 +6,5 @@ langchain-ollama
 langchain-chroma
 chromadb
 flask
+langchain-community
+docx2txt

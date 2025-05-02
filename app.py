@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 
 from sms_api import send_messages, fetch_messages
 from menu import get_preset, display_menu
+from configfile import load_last_id, save_last_id
+from query_data import query_rag
 
 # load presets
 load_dotenv()
@@ -17,7 +19,7 @@ SENDER_ID = "25037"
 # flask backend setup
 app = Flask(__name__)
 sessions = {} # temp store convos in here for now (need long term storage?)
-last_id = 0
+last_id = load_last_id()
 
 # logic for processing messages
 def handle_inbound(from_number, text):
@@ -28,17 +30,18 @@ def handle_inbound(from_number, text):
         sessions[from_number] = "AWAITING_CHOICE"
 
     elif stage == "AWAITING_CHOICE":
-        if text in ("1","2","3"):
+        if text in ("1","2","3","4","5","6","7","8"):
             reply = get_preset(text)
             sessions.pop(from_number, None)
-        elif text == "4":
-            reply = "Test input:"
+        elif text == "9":
+            reply = "Enter your custom question:"
             sessions[from_number] = "AWAITING_INPUT"
         else:
             reply = "Invalid option.\n" + display_menu()
 
     elif stage == "AWAITING_INPUT":
-        reply = f"You said: {text}"
+        reply = query_rag(text)
+        #reply = f"You said: {text}"
         sessions.pop(from_number, None)
 
     else:
@@ -56,6 +59,7 @@ def poll_inbound():
         for m in msgs:
             handle_inbound(m["from"], m["text"].strip())
             last_id = max(last_id, m["id"])
+            save_last_id(last_id)
         time.sleep(5)  # set to 5 secondsß
 
 if __name__ == "__main__":
