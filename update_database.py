@@ -5,7 +5,7 @@ from langchain_community.document_loaders import Docx2txtLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema.document import Document
 from embedding_func import get_embedding_function
-from langchain.vectorstores.chroma import Chroma
+from langchain_chroma import Chroma
 
 
 # path to where the databases is
@@ -13,7 +13,7 @@ DB_PATH = "database"
 # path to where the documents are
 DATA_PATH = "data"
 # model
-model = "mistral"
+model = "mannix/llamax3-8b-alpaca:latest"
 
 def main():
 
@@ -50,7 +50,7 @@ def load_documents(input_docs_paths):
     
 def split_documents(documents: list [Document]):
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=500,
+        chunk_size=1000,
         chunk_overlap=50,
         length_function=len,
         add_start_index = True,
@@ -67,7 +67,7 @@ def add_to_database(chunks: list[Document]):
     # Add or Update the documents.
     existing_items = db.get(include=[])  # IDs are always included by default
     existing_ids = set(existing_items["ids"])
-    print(f"Number of existing documents in DB: {len(existing_ids)}")
+    print(f"Number of existing documents in the database: {len(existing_ids)}")
 
     # Only add documents that don't exist in the DB.
     new_chunks = []
@@ -76,12 +76,12 @@ def add_to_database(chunks: list[Document]):
             new_chunks.append(chunk)
 
     if len(new_chunks):
-        print(f"Adding {len(new_chunks)} new documents")
+        print(f"Adding {len(new_chunks)} new documents.")
         new_chunk_ids = [chunk.metadata["id"] for chunk in new_chunks]
         db.add_documents(new_chunks, ids=new_chunk_ids)
-        print(f"Finished adding {len(new_chunks)} documents")
+        print(f"Finished adding {len(new_chunks)} documents.")
     else:
-        print("✅ No new documents to add")
+        print("No new documents to add.")
 
 
 # This func make all IDs like "./data/path.docx:6:2"
