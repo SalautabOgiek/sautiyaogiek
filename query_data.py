@@ -16,7 +16,7 @@ Answer the question in less than 190 characters based only on the following cont
 
 ---
 
-Answer the question in less than 190 characters based on the above context: {question}
+Answer the question in less than 190 characters based on the above context, DO NOT GIVE ANSWERS THAT IS NOT IN THE CONTEXT: {question}
 """
 
 
@@ -41,12 +41,18 @@ def query_rag(query_text: str):
     # search the DB.
     results = db.similarity_search_with_score(query_text, k=5) 
 
+
+    # Make sure response is relevant
+    if len(results) == 0 or results [0][1] < 0.7:
+        print("Unable to find matching results.")
+        return
+
     context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
     prompt = prompt_template.format(context=context_text, question=query_text)
     print(prompt)
 
-    
+
     ollama_model = OllamaLLM(model = model)
     response_text = ollama_model.invoke(prompt)
 
