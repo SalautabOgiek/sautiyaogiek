@@ -1,17 +1,18 @@
 # aikenyasms
 
-This is where the user guide is going to be beside the google drive
+This is a project under Dr.Chad Edwards assisted by Cody George Thornell and Khang Nguyen with the goal of creating a proof of concept for a solution that allow English and Swahili speakers to send SMS messages to a number and get a chatbot response in SMS about the Ogiek community, their history and more.
 
-## Setup
+## Get Started
 
-Create a `.env` file
+### General
+1. Clone the repository
+2. In terminal run: pip install -r requirements.txt
 
-```text
-API_KEY=your_api_key
-```
+### Test SMS
+1. Follow the steps under General
+2. TBD
 
-## run test
-in terminal run: 
-
-pip install -r requirements.txt
-python ollama_test.py
+### Test RAG
+1. Follow steps under General
+2. python update_database.py
+3. python query_data "Insert Your Chat to the Model Here"
