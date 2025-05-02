@@ -18,6 +18,10 @@ pip install -r requirements.txt
 
 ### Test RAG
 - Follow steps under General
+- Install local model
+```
+ollama pull mannix/llamax3-8b-alpaca:latest
+```
 - In terminal run:
 ```
 python update_database.py
