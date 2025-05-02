@@ -1,4 +1,4 @@
-# aikenyasms
+# Introduction
 
 This is a project under Dr.Chad Edwards assisted by Cody George Thornell and Khang Nguyen with the goal of creating a proof of concept for a solution that allow English and Swahili speakers to send SMS messages to a number and get a chatbot response in SMS about the Ogiek community, their history and more.
 
