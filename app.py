@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 from sms_api import send_messages, fetch_messages
 from menu import get_preset, display_menu
+from configfile import load_last_id, save_last_id
 
 # load presets
 load_dotenv()
@@ -17,7 +18,7 @@ SENDER_ID = "25037"
 # flask backend setup
 app = Flask(__name__)
 sessions = {} # temp store convos in here for now (need long term storage?)
-last_id = 0
+last_id = load_last_id()
 
 # logic for processing messages
 def handle_inbound(from_number, text):
@@ -56,6 +57,7 @@ def poll_inbound():
         for m in msgs:
             handle_inbound(m["from"], m["text"].strip())
             last_id = max(last_id, m["id"])
+            save_last_id(last_id)
         time.sleep(5)  # set to 5 secondsß
 
 if __name__ == "__main__":
