@@ -6,7 +6,7 @@ This is a project under Dr.Chad Edwards assisted by Cody George Thornell and Kha
 
 ### General
 1. Clone the repository
-2. In terminal run: pip install -r requirements.txt
+2. In terminal run: "pip install -r requirements.txt"
 
 ### Test SMS
 1. Follow the steps under General
@@ -15,5 +15,5 @@ This is a project under Dr.Chad Edwards assisted by Cody George Thornell and Kha
 
 ### Test RAG
 1. Follow steps under General
-2. python update_database.py
-3. python query_data "Insert Your Chat to the Model Here"
+2. In terminal run: "python update_database.py"
+3. In terminal run: "python query_data "Insert Your Chat to the Model Here""
