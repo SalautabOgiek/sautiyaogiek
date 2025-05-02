@@ -1,3 +1,7 @@
 africastalking
 dotenv
 ollama
+langchain
+langchain-ollama
+langchain-chroma
+chromadb
