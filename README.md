@@ -18,11 +18,11 @@ pip install -r requirements.txt
 
 ### Test RAG
 - Follow steps under General
-- Install local model
+- Install local mode, example using mannix/llamax3-8b-alpaca:latest model:
 ```
 ollama pull mannix/llamax3-8b-alpaca:latest
 ```
-- In terminal run: (If you added new docx. files to "data" folder)
+- In terminal run (Re-run this every time you added new docx. files to "data" folder too):
 ```
 python update_database.py
 ```
