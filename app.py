@@ -14,7 +14,7 @@ from query_data import query_rag
 load_dotenv()
 USERNAME  = "sandbox"
 API_KEY   = os.getenv("SAND_API")
-SENDER_ID = "25037"
+SENDER_ID = "25037" # update with shortcode
 LANG_ID = 0 # 0 for english, 1 for swahili
 
 # flask backend setup
