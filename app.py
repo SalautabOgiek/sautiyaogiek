@@ -15,7 +15,7 @@ load_dotenv()
 USERNAME  = "sandbox"
 API_KEY   = os.getenv("SAND_API")
 SENDER_ID = "25037" # update with shortcode
-LANG_ID = 0 # 0 for english, 1 for swahili
+LANG_ID = 1 # 0 for english, 1 for swahili
 
 # flask backend setup
 app = Flask(__name__)
@@ -35,7 +35,11 @@ def handle_inbound(from_number, text):
             reply = get_preset(text, LANG_ID)
             sessions.pop(from_number, None)
         elif text == "9":
-            reply = "Enter your custom question:"
+            # ask user for custom inquiry
+            if LANG_ID == 1:
+                reply = "Ingiza swali lako maalum:"
+            else:
+                reply = "Enter your custom question:"
             sessions[from_number] = "AWAITING_INPUT"
         else:
             reply = display_error(0, LANG_ID) + display_menu(LANG_ID)
