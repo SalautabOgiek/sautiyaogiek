@@ -6,7 +6,7 @@ from flask import Flask
 from dotenv import load_dotenv
 
 from sms_api import send_messages, fetch_messages
-from menu import get_preset, display_menu
+from menu import get_preset, display_menu, display_error
 from configfile import load_last_id, save_last_id
 from query_data import query_rag
 
@@ -14,7 +14,8 @@ from query_data import query_rag
 load_dotenv()
 USERNAME  = "sandbox"
 API_KEY   = os.getenv("SAND_API")
-SENDER_ID = "25037"
+SENDER_ID = "25037" # update with shortcode
+LANG_ID = 1 # 0 for english, 1 for swahili
 
 # flask backend setup
 app = Flask(__name__)
@@ -26,18 +27,22 @@ def handle_inbound(from_number, text):
     stage = sessions.get(from_number, "NEW")
 
     if stage == "NEW":
-        reply = display_menu()
+        reply = display_menu(LANG_ID)
         sessions[from_number] = "AWAITING_CHOICE"
 
     elif stage == "AWAITING_CHOICE":
         if text in ("1","2","3","4","5","6","7","8"):
-            reply = get_preset(text)
+            reply = get_preset(text, LANG_ID)
             sessions.pop(from_number, None)
         elif text == "9":
-            reply = "Enter your custom question:"
+            # ask user for custom inquiry
+            if LANG_ID == 1:
+                reply = "Ingiza swali lako maalum:"
+            else:
+                reply = "Enter your custom question:"
             sessions[from_number] = "AWAITING_INPUT"
         else:
-            reply = "Invalid option.\n" + display_menu()
+            reply = display_error(0, LANG_ID) + display_menu(LANG_ID)
 
     elif stage == "AWAITING_INPUT":
         reply = query_rag(text)
@@ -60,7 +65,7 @@ def poll_inbound():
             handle_inbound(m["from"], m["text"].strip())
             last_id = max(last_id, m["id"])
             save_last_id(last_id)
-        time.sleep(5)  # set to 5 secondsß
+        time.sleep(5)  # currently 5 second wait
 
 if __name__ == "__main__":
     # kick off polling process
