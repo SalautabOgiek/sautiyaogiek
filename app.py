@@ -59,12 +59,15 @@ def handle_inbound(from_number, text):
 def poll_inbound():
     global last_id
     while True:
-        data = fetch_messages(USERNAME, API_KEY, last_id)
-        msgs = data.get("SMSMessageData", {}).get("Messages", [])
-        for m in msgs:
-            handle_inbound(m["from"], m["text"].strip())
-            last_id = max(last_id, m["id"])
-            save_last_id(last_id)
+        try:
+            data = fetch_messages(USERNAME, API_KEY, last_id)
+            msgs = data.get("SMSMessageData", {}).get("Messages", [])
+            for m in msgs:
+                handle_inbound(m["from"], m["text"].strip())
+                last_id = max(last_id, m["id"])
+                save_last_id(last_id)
+        except Exception as e:
+            print(f"Failed to fetch messages: {e}")
         time.sleep(5)  # currently 5 second wait
 
 if __name__ == "__main__":
