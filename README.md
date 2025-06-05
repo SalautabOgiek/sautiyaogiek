@@ -23,16 +23,16 @@ LANG_ID=x
 4. Run `app.py` and message short code
 
 ### Test RAG
-- Follow steps under General
-- Install local mode, example using mannix/llamax3-8b-alpaca:latest model:
+1. Install local mode, example using mannix/llamax3-8b-alpaca:latest model:
 ```
 ollama pull mannix/llamax3-8b-alpaca:latest
 ```
-- In terminal run (Re-run this every time you added new docx. files to "data" folder too):
+2. Place reference documents into `/data` folder
+3. In terminal run (Re-run this every time you add new files):
 ```
 python update_database.py
 ```
-- In terminal run and insert your chat to the model here
+4. In terminal run and insert your chat to the model here
 ```
 python query_data [insert_chat_here]
 ```
