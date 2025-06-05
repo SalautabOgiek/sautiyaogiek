@@ -1,4 +1,4 @@
-from ollama_func import send_ollama
+from archive.ollama_func import send_ollama
 
 def main():
     print("Welcome to the chatbot! (type 'exit' to quit)\n")
