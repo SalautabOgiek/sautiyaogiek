@@ -5,10 +5,10 @@ from langchain_ollama import OllamaLLM
 from embedding_func import get_embedding_function
 
 
-# path to the local database to fetch information populate by running update_database.py 
+# path to the local database to fetch information that is populated by running update_database.py
 DB_PATH = "database"
 
-# prompt feeding the model to get desired response, context is fetch from database, and question is user input
+# prompt feeding the model to get desired response, can modify for better results, context is fetch from database, and question is user input
 PROMPT_TEMPLATE = """
 You are an informational agent dedicated to educating users about the Ogiek community. Given the most relevant documentations and a question either in English or Swahili from the user, 
 you must answer the question in English if asked in English, in Swahili if asked in Swahili. Your answer should be short, no more than 190 characters. If a question is asked that does not relate to the documentation given,
@@ -45,7 +45,7 @@ def query_rag(query_text: str):
     db = Chroma(persist_directory=DB_PATH, embedding_function=embedding_function)
 
     # search the DB.
-    results = db.similarity_search_with_score(query_text, k=3) 
+    results = db.similarity_search_with_score(query_text, k=3) # Modify this to grab more context per prompt, might hurt if too high or too low
 
 
     # Make sure response is relevant
