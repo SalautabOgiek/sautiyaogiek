@@ -13,13 +13,14 @@ pip install -r requirements.txt
 
 ### Test SMS
 1. Follow the steps under General
-2. Generate Sanbox api key and place into a .env file
+2. Generate Africa Talking api key, phone number shortcode, language id (0 for english, 1 for swahili) and place into a .env file
 ```
-SAND_API=xxxxxxxxxxxxxxx
+AT_API=xxxxxxxxxxxxxxxxxxxx
+SEND_ID=xxxxx
+LANG_ID=x
 ```
-3. Generate short code and place into `app.py` variables (SENDER_ID)
-4. Launch simulator: https://developers.africastalking.com/simulator
-5. Run `app.py` and message short code
+3. Launch simulator: https://developers.africastalking.com/simulator
+4. Run `app.py` and message short code
 
 ### Test RAG
 - Follow steps under General
