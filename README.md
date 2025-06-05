@@ -27,8 +27,9 @@ LANG_ID=x
 ```
 ollama pull mannix/llamax3-8b-alpaca:latest
 ```
-2. Place reference documents into `/data` folder
-3. In terminal run (Re-run this every time you add new files):
+2. Make a folder name 'data' within the root folder.
+3. Place all documents you want the model tofetch information from into `/data` folder
+4. In terminal run (Re-run this every time you add new files):
 ```
 python update_database.py
 ```
