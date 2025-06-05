@@ -36,3 +36,4 @@ python update_database.py
 ```
 python query_data [insert_chat_here]
 ```
+5. Or through sms connection, choose number 9 on sms menu for generative response
