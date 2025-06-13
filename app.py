@@ -12,7 +12,7 @@ from query_data import query_rag
 
 # load presets
 load_dotenv()
-USERNAME  = "sandbox"
+USERNAME  = os.getenv("USERNAME") # env variable for Africa Talking id name
 API_KEY   = os.getenv("AT_API") # env variable for Africa Talking api key
 SENDER_ID = os.getenv("SEND_ID") # env variable for server phone number/shortcode 
 LANG_ID = os.getenv("LANG_ID") # env variable for language: 0 for english, 1 for swahili
