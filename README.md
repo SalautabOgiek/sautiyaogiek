@@ -15,6 +15,7 @@ pip install -r requirements.txt
 1. Follow the steps under General
 2. Generate Africa Talking api key, phone number shortcode, language id (0 for english, 1 for swahili) and place into a .env file
 ```
+USERNAME=xxxxxxx
 AT_API=xxxxxxxxxxxxxxxxxxxx
 SEND_ID=xxxxx
 LANG_ID=x
