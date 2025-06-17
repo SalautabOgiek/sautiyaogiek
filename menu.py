@@ -25,7 +25,7 @@ swahili_presets = {
 # handle preset responses
 def get_preset(option, lang):
     if lang == 1: # swahili
-        return swahili_presets.get(option, "Chaguo lisilo halali limechanguliwa.")
+        return swahili_presets.get(option, "Chaguo lisilo halali limechaguliwa.")
     else: # default engilsh
         return english_presets.get(option, "Invalid option selected.")
 
