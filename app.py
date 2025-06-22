@@ -5,6 +5,7 @@ import time
 from flask import Flask
 from dotenv import load_dotenv
 
+# import custom functions
 from sms_api import send_messages, fetch_messages
 from menu import get_preset, display_menu, display_error
 from configfile import load_last_id, save_last_id
@@ -26,10 +27,12 @@ last_id = load_last_id()
 def handle_inbound(from_number, text):
     stage = sessions.get(from_number, "NEW")
 
+    # start conversation, showing menu and saving session
     if stage == "NEW":
         reply = display_menu(LANG_ID)
         sessions[from_number] = "AWAITING_CHOICE"
 
+    # continue conversation, based on menu choice return response
     elif stage == "AWAITING_CHOICE":
         if text in ("1","2","3","4","5","6","7","8"):
             reply = get_preset(text, LANG_ID)
@@ -44,15 +47,17 @@ def handle_inbound(from_number, text):
         else:
             reply = display_error(0, LANG_ID) + display_menu(LANG_ID)
 
+    # genai response, reply based on users input and received rag output
     elif stage == "AWAITING_INPUT":
         reply = query_rag(text)
-        #reply = f"You said: {text}"
         sessions.pop(from_number, None)
 
+    # error case, show menu and set to waiting for response
     else:
         reply = display_menu()
         sessions[from_number] = "AWAITING_CHOICE"
 
+    # based on selected reply above, send user message
     send_messages(USERNAME, API_KEY, [from_number], reply, SENDER_ID)
 
 # threaded process for monitoring incoming messages
@@ -75,5 +80,5 @@ if __name__ == "__main__":
     t = threading.Thread(target=poll_inbound, daemon=True)
     t.start()
 
-    # launch flask app
-    app.run(host="0.0.0.0", port=1738)
+    # launch flask app on port 55000
+    app.run(host="0.0.0.0", port=55000)
