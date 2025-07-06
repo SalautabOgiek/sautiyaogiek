@@ -1,3 +1,7 @@
+# Muhtasari wa Mradi
+
+## Mradi huu, unaofadhiliwa na Mozilla Technology Fund, unaongozwa na Lusike Mukhongo, Chad Edwards, Autumn Edwards, Cynthia Klekar-Cunningham, na Winston Mano, kwa msaada wa Cody Thornell na Khang Nguyen. Lengo la mradi ni kutengeneza mfano wa mfumo wa ujumbe wa SMS unaoendeshwa na teknolojia ya AI kwa ajili ya jamii ya WaOgiek wanaoishi katika Msitu wa Mau. Kupitia mfumo huu, wanajamii wataweza kutuma ujumbe mfupi wa maandishi kwa nambari maalum na kupokea majibu kutoka kwa chatbot kuhusu historia ya WaOgiek, uhifadhi wa misitu, maamuzi ya kisheria, na mengineyo. Mradi huu umechagua kutumia simu za kawaida, pia zinajulikana kama kabambe, kwa sababu hazihitaji intaneti, zina betri zinazodumu kwa muda mrefu, na ni nafuu – hivyo kuziwezesha kuwa rahisi kupatikana na jamii zilizo na rasilimali chache.
+
 # Introduction
 
 This is a project funded by Mozilla Technology Fund under Lusike Mukhongo, Chad Edwards, Autumn Edwards, Cynthia Klekar-Cunningham and Winston Mano, and assisted by Cody Thornell and Khang Nguyen with the goal of creating a prototype for an AI-enhanced SMS system for the Ogiek community in Mau forest to send SMS messages to a number and get a chatbot response about their history, forest conservation, legal rulings and more. The project selected feature phones for developing an AI-enhanced messaging system as they can be used without access to the Internet, their phone battery lasts longer, and the phones are affordable, thereby making them more accessible to communities.
