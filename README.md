@@ -31,21 +31,22 @@ pip install -r requirements.txt
 1. Follow the steps under General
 2. Generate Africa Talking api key, phone number shortcode, language id (0 for english, 1 for swahili) and place into a .env file
 ```
-USERNAME=xxxxxxx
+AT_USERNAME=xxxxxxx
 AT_API=xxxxxxxxxxxxxxxxxxxx
-SEND_ID=xxxxx
+AT_SEND_ID=xxxxx
 LANG_ID=x
 ```
 3. Launch simulator: https://developers.africastalking.com/simulator
 4. Run `app.py` and message short code
 
 ### Test RAG
-1. Install local mode, example using mannix/llamax3-8b-alpaca:latest model:
+1. Install ollama at https://ollama.com/download
+1. Install model, currently using mannix/llamax3-8b-alpaca:latest model:
 ```
 ollama pull mannix/llamax3-8b-alpaca:latest
 ```
 2. Make a folder name 'data' within the root folder.
-3. Place all documents you want the model to fetch information from into `/data` folder
+3. Place all `.docx` files you want the model to fetch information from into `/data` folder
 4. In terminal run (Re-run this every time you add new files):
 ```
 python update_database.py
