@@ -16,7 +16,7 @@ load_dotenv()
 USERNAME  = os.getenv("AT_USERNAME") # env variable for Africa Talking id name
 API_KEY   = os.getenv("AT_API") # env variable for Africa Talking api key
 SENDER_ID = os.getenv("AT_SEND_ID") # env variable for server phone number/shortcode 
-LANG_ID = os.getenv("LANG_ID") # env variable for language: 0 for english, 1 for swahili
+LANG_ID = int(os.getenv("LANG_ID")) # env variable for language: 0 for english, 1 for swahili
 
 # flask backend setup
 app = Flask(__name__)
