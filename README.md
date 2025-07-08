@@ -29,15 +29,21 @@ pip install -r requirements.txt
 
 ### Test SMS
 1. Follow the steps under General
-2. Generate Africa Talking api key, phone number shortcode, language id (0 for english, 1 for swahili) and place into a .env file
+2. Generate Africa Talking api key, phone number shortcode, language id (0 for english, 1 for swahili) and place into a .env file with SAND_ and LANG values for testing. (AT_ values are used for production).
 ```
 AT_USERNAME=xxxxxxx
 AT_API=xxxxxxxxxxxxxxxxxxxx
 AT_SEND_ID=xxxxx
+SAND_USERNAME=xxxxxxx
+SAND_API=xxxxxxxxxxxxxxxxxxxx
+SAND_SEND_ID=xxxxx
 LANG_ID=x
 ```
 3. Launch simulator: https://developers.africastalking.com/simulator
-4. Run `app.py` and message short code
+4. Run server in sandbox mode and message short code
+```
+python app.py --sandbox
+```
 
 ### Test RAG
 1. Install ollama at https://ollama.com/download
@@ -56,3 +62,21 @@ python update_database.py
 python query_data [insert_chat_here]
 ```
 5. Or through sms connection, choose number 9 on sms menu for generative response
+
+### Production Deployment
+1. Verify you have completed the above steps to test on Simulator in sandbox mode and RAG module is working
+2. Make sure `AT_` and `LANG_ID` values are set in .env like below
+```
+AT_USERNAME=xxxxxxx
+AT_API=xxxxxxxxxxxxxxxxxxxx
+AT_SEND_ID=xxxxx
+SAND_USERNAME=xxxxxxx
+SAND_API=xxxxxxxxxxxxxxxxxxxx
+SAND_SEND_ID=xxxxx
+LANG_ID=x
+```
+3. Launch `app.py` in production mode
+```
+python app.py --prod
+```
+4. Send a message or shortcode to AT_SEND_ID value from a device on the African SMS network
