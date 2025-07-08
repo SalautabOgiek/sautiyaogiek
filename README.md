@@ -80,3 +80,7 @@ LANG_ID=x
 python app.py --prod
 ```
 4. Send a message or shortcode to AT_SEND_ID value from a device on the African SMS network
+
+### App.py Args
+- Sandbox mode with `-s` or `--sandbox`
+- Production mode with `-p` or `-prod`
