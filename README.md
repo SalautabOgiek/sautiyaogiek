@@ -83,4 +83,4 @@ python app.py --prod
 
 ### App.py Args
 - Sandbox mode with `-s` or `--sandbox`
-- Production mode with `-p` or `-prod`
+- Production mode with `-p` or `--prod`
