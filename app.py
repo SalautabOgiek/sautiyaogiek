@@ -23,6 +23,14 @@ app = Flask(__name__)
 sessions = {} # temp store convos in here for now (need long term storage?)
 last_id = load_last_id()
 
+def main():
+    # kick off polling process
+    t = threading.Thread(target=poll_inbound, daemon=True)
+    t.start()
+
+    # launch flask app on port 55000
+    app.run(host="0.0.0.0", port=55000)
+
 # logic for processing messages
 def handle_inbound(from_number, text):
     stage = sessions.get(from_number, "NEW")
@@ -76,9 +84,4 @@ def poll_inbound():
         time.sleep(5)  # currently 5 second wait
 
 if __name__ == "__main__":
-    # kick off polling process
-    t = threading.Thread(target=poll_inbound, daemon=True)
-    t.start()
-
-    # launch flask app on port 55000
-    app.run(host="0.0.0.0", port=55000)
+    main()
