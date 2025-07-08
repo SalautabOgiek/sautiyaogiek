@@ -39,7 +39,7 @@ SAND_API=xxxxxxxxxxxxxxxxxxxx
 SAND_SEND_ID=xxxxx
 LANG_ID=x
 ```
-3. Launch simulator: https://developers.africastalking.com/simulator
+3. Launch simulator at https://developers.africastalking.com/simulator and use an available number such as `+254722123123`
 4. Run server in sandbox mode and message short code
 ```
 python app.py --sandbox
