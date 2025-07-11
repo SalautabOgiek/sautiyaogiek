@@ -1,3 +1,5 @@
+![Mau Forest](images/header.jpg)
+
 # Muhtasari wa Mradi
 
 Mradi huu, unaofadhiliwa na Mozilla Technology Fund, unaongozwa na Lusike Mukhongo, Chad Edwards, Autumn Edwards, Cynthia Klekar-Cunningham, na Winston Mano, kwa msaada wa Cody Thornell na Khang Nguyen. Lengo la mradi ni kutengeneza mfano wa mfumo wa ujumbe wa SMS unaoendeshwa na teknolojia ya AI kwa ajili ya jamii ya WaOgiek wanaoishi katika Msitu wa Mau. Kupitia mfumo huu, wanajamii wataweza kutuma ujumbe mfupi wa maandishi kwa nambari maalum na kupokea majibu kutoka kwa chatbot kuhusu historia ya WaOgiek, uhifadhi wa misitu, maamuzi ya kisheria, na mengineyo. Mradi huu umechagua kutumia simu za kawaida, pia zinajulikana kama kabambe, kwa sababu hazihitaji intaneti, zina betri zinazodumu kwa muda mrefu, na ni nafuu – hivyo kuziwezesha kuwa rahisi kupatikana na jamii zilizo na rasilimali chache.
@@ -17,6 +19,8 @@ The primary objective was to determine how an AI-enhanced messaging system could
 We generated data insights from interviews, Focus Group Discussions (FGDs), ethnographic observations of reforestation efforts in Mau Forest, and a co-design and usability workshop.
 
 To complement the SMS system, we co-developed a website (sautiyaogiek.com) as a dynamic digital space for preserving and sharing Ogiek stories, voices, and oral histories. The platform serves as a living repository where community knowledge can be recorded, accessed, and celebrated. By providing a central hub for historical accounts, cultural expressions, legal resources, and environmental initiatives, the website fosters intergenerational learning and enhances collective memory. It also enables broader visibility of the Ogiek’s experiences and contributions, allowing the community to shape their narrative and ensure that their knowledge systems remain accessible and relevant in both local and global advocacy.
+
+![Planet Centered Design](images/planet_centered_design.png)
 
 ## Get Started
 
@@ -44,6 +48,9 @@ LANG_ID=x
 ```
 python app.py --sandbox
 ```
+*Note that Africa Talking's Simulator currently doesn't support newline characters, but they will work in production.*
+
+![SMS Simulator](images/simulator_sms.png)
 
 ### Test RAG
 1. Install ollama at https://ollama.com/download
@@ -79,7 +86,9 @@ LANG_ID=x
 ```
 python app.py --prod
 ```
-4. Send a message or shortcode to AT_SEND_ID value from a device on the African SMS network
+4. Send a message or shortcode to AT_SEND_ID value from a device on the African SMS network with `guide/AIKENYASMS User Guide.pdf`
+
+![Deployed SMS](images/deployed_sms.png)
 
 ### App.py Args
 - Sandbox mode with `-s` or `--sandbox`
