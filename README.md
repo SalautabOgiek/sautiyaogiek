@@ -48,6 +48,9 @@ LANG_ID=x
 ```
 python app.py --sandbox
 ```
+*Note that Africa Talking's Simulator currently doesn't suppoirt newline characters, but they will work in production.*
+
+![SMS Simulator](images/simulator_sms.png)
 
 ### Test RAG
 1. Install ollama at https://ollama.com/download
@@ -84,6 +87,8 @@ LANG_ID=x
 python app.py --prod
 ```
 4. Send a message or shortcode to AT_SEND_ID value from a device on the African SMS network
+
+![Deployed SMS](images/deployed_sms.png)
 
 ### App.py Args
 - Sandbox mode with `-s` or `--sandbox`
