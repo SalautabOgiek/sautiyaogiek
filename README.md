@@ -20,6 +20,8 @@ We generated data insights from interviews, Focus Group Discussions (FGDs), ethn
 
 To complement the SMS system, we co-developed a website (sautiyaogiek.com) as a dynamic digital space for preserving and sharing Ogiek stories, voices, and oral histories. The platform serves as a living repository where community knowledge can be recorded, accessed, and celebrated. By providing a central hub for historical accounts, cultural expressions, legal resources, and environmental initiatives, the website fosters intergenerational learning and enhances collective memory. It also enables broader visibility of the Ogiek’s experiences and contributions, allowing the community to shape their narrative and ensure that their knowledge systems remain accessible and relevant in both local and global advocacy.
 
+![Planet Centered Design](UXDesign/planet_centered_design/planet_centered_design.png)
+
 ## Get Started
 
 ### General
