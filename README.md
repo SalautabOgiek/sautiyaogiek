@@ -48,7 +48,7 @@ LANG_ID=x
 ```
 python app.py --sandbox
 ```
-*Note that Africa Talking's Simulator currently doesn't suppoirt newline characters, but they will work in production.*
+*Note that Africa Talking's Simulator currently doesn't support newline characters, but they will work in production.*
 
 ![SMS Simulator](images/simulator_sms.png)
 
@@ -86,7 +86,7 @@ LANG_ID=x
 ```
 python app.py --prod
 ```
-4. Send a message or shortcode to AT_SEND_ID value from a device on the African SMS network
+4. Send a message or shortcode to AT_SEND_ID value from a device on the African SMS network with `guide/AIKENYASMS User Guide.pdf`
 
 ![Deployed SMS](images/deployed_sms.png)
 
