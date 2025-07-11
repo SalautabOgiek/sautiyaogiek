@@ -1,4 +1,4 @@
-![Mau Forest](images/header.jpg)
+![AI Kenya Logo](images/aikenya.png)
 
 # Muhtasari wa Mradi
 
