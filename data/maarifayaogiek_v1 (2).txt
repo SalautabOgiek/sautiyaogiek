@@ -1,0 +1,72 @@
+{
+  "taarifa": [
+    {
+      "input": "Jamii ya Ogiek ni akina nani?",
+      "output": "Ogiek ni watu wa asili wanaoishi msituni. Wanategemea uwindaji, kufuga nyuki, na kula matunda ya porini."
+    },
+    {
+      "input": "Ogiek wanaishi wapi?",
+      "output": "Ogiek wanaishi katika Msitu wa Mau, Kenya. Msitu huu ni nyumbani kwao na unawapa chakula na makazi."
+    },
+    {
+      "input": "Ogiek wanafanya nini katika maisha yao?",
+      "output": "Wanaokota asali, wanawinda wanyama wadogo, na wanatunza msitu ili uendelee kuwa na miti na wanyama."
+    },
+    {
+      "input": "Ogiek wanazungumza lugha gani?",
+      "output": "Wanasema lugha ya Ogiek. Lugha hii ni sehemu ya lugha za Kalenjin."
+    },
+    {
+      "input": "Kwa nini Ogiek wanapoteza ardhi yao?",
+      "output": "Serikali na watu wengine wamechukua sehemu za msitu wao, hivyo Ogiek hawana sehemu kubwa ya kuishi kama zamani."
+    },
+    {
+      "input": "Ogiek wanataka nini?",
+      "output": "Wanataka ardhi yao irudishwe na watambuliwe kama watu wa asili wa Msitu wa Mau."
+    },
+    {
+      "input": "Ogiek wanatunza vipi msitu?",
+      "output": "Hawakati miti ovyo na wanatunza wanyama. Wanatumia msitu kwa njia inayouhifadhi."
+    },
+    {
+      "input": "Hali ya hewa inawaathiri vipi Ogiek?",
+      "output": "Miti inapokatwa, chakula chao hupungua. Hali ya hewa ikibadilika, maisha yao yanakuwa magumu zaidi."
+    },
+    {
+      "input": "Watoto wa Ogiek wanaenda shule?",
+      "output": "Baadhi yao wanaenda shule, lakini wengine hawana nafasi kwa sababu shule ni mbali au hakuna pesa za masomo."
+    },
+    {
+      "input": "Ni nani anayesaidia kutunza Msitu wa Mau?",
+      "output": "Ogiek na mashirika ya mazingira wanapambana ili msitu usikatwe na uendelee kuwa na miti na wanyama."
+    },
+    {
+      "input": "Ogiek wanakula chakula gani?",
+      "output": "Wanapenda kula asali, mizizi, nyama ya wanyama wadogo, na matunda ya msituni."
+    },
+    {
+      "input": "Ogiek hujenga nyumba zao kwa nini?",
+      "output": "Wanatumia miti na nyasi kujenga nyumba ndogo za msituni ili ziwe baridi na salama."
+    },
+    {
+      "input": "Ni wanyama gani wanaopatikana Msitu wa Mau?",
+      "output": "Msitu wa Mau una ndovu, nyani, swara, na ndege wa aina nyingi."
+    },
+    {
+      "input": "Watu wa Ogiek hufanya kazi gani?",
+      "output": "Hufuga nyuki kwa asali, huwinda wanyama wadogo, na hukusanya matunda ya porini."
+    },
+    {
+      "input": "Ogiek husherehekea nini?",
+      "output": "Wana sherehe za kuzaliwa, kuvuka rika, na sherehe za mvua au mavuno mazuri."
+    },
+    {
+      "input": "Kwa nini Ogiek hawana ardhi kubwa?",
+      "output": "Serikali na watu wengine wamewachukua ardhi yao, na sasa wanataka kurudishiwa."
+    },
+    {
+      "input": "Jamii inaweza kusaidia Ogiek vipi?",
+      "output": "Kwa kusaidia kutunza msitu, kuwasikiliza, na kuwasaidia kupata haki zao za ardhi."
+    }
+  ]
+}
