@@ -1,0 +1,56 @@
+{
+  "taarifa": [
+    {
+      "mada": "Utangulizi wa Jamii ya Ogiek",
+      "swali": "Jamii ya Ogiek ni akina nani?",
+      "jibu": "Ogiek ni jamii ya asili inayoishi katika Msitu wa Mau, wakitegemea uwindaji, ukulima mdogo, na ufugaji wa nyuki."
+    },
+    {
+      "mada": "Makazi ya Ogiek",
+      "swali": "Ogiek wanaishi wapi?",
+      "jibu": "Ogiek wanaishi katika Msitu wa Mau, Kenya, ambapo wanahifadhi mazingira kwa kutumia mbinu zao za jadi."
+    },
+    {
+      "mada": "Utamaduni wa Ogiek",
+      "swali": "Utamaduni wa Ogiek ni upi?",
+      "jibu": "Ogiek wanathamini uwindaji, ukusanyaji wa asali, na wana mila zinazolinda mazingira na bioanuwai ya msitu."
+    },
+    {
+      "mada": "Lugha ya Ogiek",
+      "swali": "Ogiek wanazungumza lugha gani?",
+      "jibu": "Ogiek wanazungumza lugha ya Ogiek, ambayo ni sehemu ya kundi la lugha za Kalenjin."
+    },
+    {
+      "mada": "Changamoto za Ardhi",
+      "swali": "Je, Ogiek wanakabiliwa na changamoto gani za ardhi?",
+      "jibu": "Wamepoteza ardhi yao ya mababu kwa sababu ya uvamizi, sera za serikali, na ukataji miti wa kibiashara."
+    },
+    {
+      "mada": "Haki za Kisheria",
+      "swali": "Je, Ogiek wanapigania nini kisheria?",
+      "jibu": "Ogiek wanapigania haki ya kutambuliwa kama jamii ya asili na kurudishiwa ardhi yao katika Msitu wa Mau."
+    },
+    {
+      "mada": "Mchango wa Ogiek kwa Mazingira",
+      "swali": "Ogiek wanahifadhi vipi mazingira?",
+      "jibu": "Kwa kutumia mbinu zao za jadi kama ufugaji wa nyuki na kilimo endelevu, wanasaidia kulinda bioanuwai ya msitu."
+    },
+    {
+      "mada": "Athari za Mabadiliko ya Tabianchi",
+      "swali": "Mabadiliko ya tabianchi yanaathiri vipi Ogiek?",
+      "jibu": "Kupungua kwa misitu kunapunguza upatikanaji wa chakula cha asili na kuathiri maisha yao ya kitamaduni."
+    },
+    {
+      "mada": "Elimu katika Jamii ya Ogiek",
+      "swali": "Je, Ogiek wanapata elimu?",
+      "jibu": "Fursa za elimu ni chache kwa Ogiek kutokana na umaskini, ubaguzi, na ukosefu wa miundombinu ya shule."
+    },
+    {
+      "mada": "Mikakati ya Uhifadhi",
+      "swali": "Je, kuna juhudi gani za kuhifadhi Msitu wa Mau?",
+      "jibu": "Mashirika ya mazingira na Ogiek wenyewe wanapigania kuhifadhi msitu dhidi ya ukataji miti na uharibifu wa ardhi."
+    }
+  ]
+}
+
+
